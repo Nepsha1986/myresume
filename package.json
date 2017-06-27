@@ -1,0 +1,25 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "landing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nepsha1986/myresume.git"
+  },
+  "author": "Alex Nepsha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nepsha1986/myresume/issues"
+  },
+  "homepage": "https://github.com/Nepsha1986/myresume#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean-css": "^3.4.2",
+    "gulp-sass": "^3.1.0"
+  }
+}

@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+}
+
+body,html {
+  font: $font-text;
+}
+
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+h1 {
+  font-size: 52px;
+}
