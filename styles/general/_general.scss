@@ -3,7 +3,8 @@
 }
 
 body,html {
-  font: $font-text;
+  color: $c-text;
+  font: 14px/1.5 $font-text, sans-serif;
 }
 
 .clearfix:after {
@@ -12,6 +13,36 @@ body,html {
   clear: both;
 }
 
-h1 {
-  font-size: 52px;
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: $content-max-width;
+}
+
+h1,.h1 {
+  font: bold 52px/1.5 $font-title, sans-serif;
+}
+
+h2, .h2 {
+  font: bold 42px/1.5 $font-title, sans-serif;
+}
+
+h3, .h3 {
+  font: bold 32px/1.5 $font-title, sans-serif;
+}
+
+h4, .h4 {
+  font: bold 22px/1.5 $font-text, sans-serif;
+}
+
+h5, h5 {
+  font: bold 18px/1.5 $font-text, sans-serif;
+}
+
+h6, h6 {
+  font: bold 16px/1.5 $font-text, sans-serif;
+}
+
+.fa {
+  margin-right: 1em;
 }
