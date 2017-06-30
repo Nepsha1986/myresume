@@ -1,6 +1,23 @@
 #main-header {
+  z-index: 100;
   position: absolute;
   width: 100%;
   top: 0;
   left: 0;
+  text-align: right;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+
+  .portfolio-link {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1.6em;
+    transition: .3s;
+
+    &.active,
+    &:hover {
+      text-shadow: $hover-shadow;
+    }
+  }
 }

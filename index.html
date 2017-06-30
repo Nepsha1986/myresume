@@ -14,25 +14,39 @@
             crossorigin="anonymous">
         
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.5.0/velocity.ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 </head>
+<body>
 
 <header id="main-header">
     <div class="container">
-
+        <a href="#" class="portfolio-link"><i class="fa fa-toggle-off"></i>Portfolio</a>
     </div>
 </header>
 
 <section class="hero">
     <div class="container">
         <div class="photo-frame">
-            <div class="image-wrap">
-                <img src="http://socialpro.miguelvasquez.net/public/avatar/large_johndoe_18gu2qv.jpg" alt="Alex Nepsha">
+            <div class="socials-block">
+                <ul class="socials-list">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                </ul>
             </div>
+
+            <div class="image-wrap">
+                <img src="http://nav-studio.tk/wp-content/themes/nav-studio/img/me.jpg" alt="Alex Nepsha">
+            </div>
+
             <h1 class="name">Alex Nepsha</h1>
             <div class="position">Front-end, WordPress Developer</div>
 
             <div class="animated-frame">
-                <span class="title">Portfolio</span>
+
                 <ul class="animated-lines">
                     <li class="line-top"></li>
                     <li class="line-right"></li>
@@ -42,9 +56,54 @@
             </div>
         </div>
 
+        <div class="portfolio-block">
+            <h2><i class="fa fa-code"></i>Portfolio</h2>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="http://test-server-for-web.tk/wp-content/uploads/2017/05/girl22.png" alt="Work 1">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="http://test-server-for-web.tk/wp-content/uploads/2017/05/123123.jpg" alt="Work 1">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="http://test-server-for-web.tk/wp-content/uploads/2017/05/slice-112312.jpg" alt="Work 1">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="http://test-server-for-web.tk/wp-content/uploads/2017/05/123.jpg" alt="Work 1">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="http://test-server-for-web.tk/wp-content/uploads/2017/05/slice-1.png" alt="Work 1">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="http://test-server-for-web.tk/wp-content/uploads/2017/05/123.jpg" alt="Work 1">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
         <div class="info-block">
             <h2 class="title">About me</h2>
-            <p class="slogan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam autem exercitationem explicabo ipsum libero neque sint sit veniam voluptatem! Ad cumque debitis, dicta distinctio dolorem dolores earum esse excepturi, fugit labore quam quisquam reiciendis saepe, sapiente sit totam ut.</p>
+            <p class="slogan">Hello, My Name is Alex and I'm front-end, WordPress developer. My specialization is
+                building websites using WordPress, which makes editing your website as easy as editing a Word document.
+                For more complex websites I spend a great deal of time crafting the backend experience
+                so even non-technical users can easily manage it.
+            </p>
 
             <dl class="short-info clearfix">
                 <dt>Date of birth:</dt>
@@ -52,11 +111,13 @@
                 <dt>Address</dt>
                 <dd>Ukraine</dd>
                 <dt>Marital status</dt>
-                <dd>along</dd>
+                <dd>Single</dd>
                 <dt>Phone:</dt>
                 <dd>+38(093)156-39-02</dd>
                 <dt>Email:</dt>
                 <dd>nepsha1986@gmail.ru</dd>
+                <dt>Skype:</dt>
+                <dd>nepsha1986</dd>
             </dl>
         </div>
     </div>
@@ -65,7 +126,6 @@
 <main>
     <section class="portfolio">
         <div class="container">
-            <h2>Please, look at my CV</h2>
             <ul class="info-list">
                 <!--Experience-->
                 <li class="portfolio-item portfolio-item_experience">
@@ -245,7 +305,7 @@
         </p>
     </div>
 </footer>
-<body>
+
 <script src="./js/main.js"></script>
 </body>
 </html>
