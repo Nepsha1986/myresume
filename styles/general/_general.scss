@@ -4,7 +4,7 @@
 
 body,html {
   color: $c-text;
-  font: 14px/1.5 $font-text, sans-serif;
+  font: 16px/1.5 $font-text, sans-serif;
 }
 
 .clearfix:after {
@@ -45,4 +45,27 @@ h6, h6 {
 
 .fa {
   margin-right: 1em;
+}
+
+ul.bullet-list {
+  li {
+    list-style: none;
+    margin-bottom: 3px;
+    
+    &::before {
+      display: inline-block;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: $c-main;
+      margin: 0 7px 3px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $c-main;
+  transition: .3s;
 }

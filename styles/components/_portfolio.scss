@@ -52,7 +52,7 @@ section.portfolio {
             display: flex;
             flex-flow: row wrap;
             &:not(:last-child) {
-              margin-bottom: 30px;
+              margin-bottom: 20px;
             }
 
             .wrap_skill-name {
@@ -74,17 +74,49 @@ section.portfolio {
 
               .skill-bar {
                 height: 40px;
-                border-radius: 5px;
+                border-radius: 20px;
+                padding: 3px;
                 width: 100%;
-                background: $c-main-alt;
+                box-shadow: 0 0 2px #000,inset 0 0 15px #000;
+                border: 1px solid #fff;
+
+                .skill-process {
+                  text-shadow: 1px 1px 1px #000;
+                  text-align: center;
+                  box-shadow: 0 0 2px #fff;
+                  border-radius: 20px;
+                  background: $c-main;
+                  line-height: 32px;
+                  vertical-align: middle;
+                  color: #fff;
+                  height: 100%;
+                }
               }
             }
+          }
+        }
+      }
 
-            .wrap_skill-info {
-              width: 100%;
-              display: none;
-              .skill-info {
+      &.portfolio-item_interests {
+        .interests-list {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-flow: row wrap;
 
+          li {
+            list-style: none;
+            width: calc(100%/3);
+            padding: 10px;
+
+            .img-wrap {
+              border-radius: 50%;
+              overflow: hidden;
+
+              img {
+                display: block;
+                width: 100%;
+                height: auto;
               }
             }
           }

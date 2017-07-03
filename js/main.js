@@ -1,11 +1,6 @@
 $(document).ready(function () {
     'use strict';
 
-    $('section.portfolio .skill-list .skill-name').on('click', function () {
-        var hiddenEl = $(this).closest('.skill-single').find('.wrap_skill-info');
-        $(hiddenEl).slideToggle();
-    });
-
     $(document).on('click', '.portfolio-link', function (e) {
         e.preventDefault();
         var clickedEl = $(this);
@@ -135,4 +130,24 @@ $(document).ready(function () {
             }
         }
     }
+
+    function skillsInit() {
+        var skillBar = $('.portfolio-item.portfolio-item_skills');
+        var skillProcess = $(skillBar).find('.skill-process');
+
+        console.log(skillBar);
+        console.log(skillProcess);
+
+        $(skillProcess).each(function (index, el) {
+            var percentage = $(el).data('persentage');
+            $(el).text(percentage + "%");
+
+            $(el).css({
+                width: percentage + '%'
+            });
+            console.log(percentage);
+        });
+    }
+
+    skillsInit();
 });
