@@ -55,60 +55,64 @@ $(document).ready(function () {
     $(document).on('load', heroAnimation());
 
     function heroAnimation() {
-        var heroBlock = $('section.hero');
-        var text  = $(heroBlock).find('.info-block');
-        var photo = $(heroBlock).find('.photo-frame');
+        var clientWidth = $(window).width();
 
-        $(photo).velocity({
-            translateZ: -100
-        }, {
-            duration: 0
-        }).velocity({
-            translateZ: 0
-        }, {
-            duration: 600,
-            delay: 500,
-            easing: 'easeInElastic',
-            complete: function() {
-                amimateLineLong(photo.find('.line-top'),'width', 1);
-                amimateLineLong(photo.find('.line-bottom'),'width', 2);
-                amimateLineLong(photo.find('.line-left'),'height', 3);
-                amimateLineLong(photo.find('.line-right'),'height', 4);
-            }
-        }).velocity({
-            translateX: 0,
-            rotateX: -12,
-            rotateY: 30,
-            rotateZ: 0
-        }, {
-            delay: 0,
-            duration: 1000
-        }).velocity({
-            translateX: 0,
-            rotateX: 10,
-            rotateY: 15,
-            rotateZ: 0,
-            complete: function () {
-                $(text).children().each(function(index, el) {
-                    $(el).velocity('transition.bounceRightIn', {
-                        delay: 500*index
+        if(clientWidth > 1100) {
+            var heroBlock = $('section.hero');
+            var text  = $(heroBlock).find('.info-block');
+            var photo = $(heroBlock).find('.photo-frame');
+
+            $(photo).velocity({
+                translateZ: -100
+            }, {
+                duration: 0
+            }).velocity({
+                translateZ: 0
+            }, {
+                duration: 600,
+                delay: 500,
+                easing: 'easeInElastic',
+                complete: function() {
+                    amimateLineLong(photo.find('.line-top'),'width', 1);
+                    amimateLineLong(photo.find('.line-bottom'),'width', 2);
+                    amimateLineLong(photo.find('.line-left'),'height', 3);
+                    amimateLineLong(photo.find('.line-right'),'height', 4);
+                }
+            }).velocity({
+                translateX: 0,
+                rotateX: -12,
+                rotateY: 30,
+                rotateZ: 0
+            }, {
+                delay: 0,
+                duration: 1000
+            }).velocity({
+                translateX: 0,
+                rotateX: 10,
+                rotateY: 15,
+                rotateZ: 0,
+                complete: function () {
+                    $(text).children().each(function(index, el) {
+                        $(el).velocity('transition.bounceRightIn', {
+                            delay: 500*index
+                        });
                     });
-                });
 
-                $(photo).find('.animated-frame').velocity({
-                    rotateZ: 7,
-                    rotateX: 40,
-                    rotateY: 16
-                }, {
-                    loop: true,
-                    duration: 5000
-                });
-            }
-        }, {
-            delay: 0,
-            duration: 10000,
-            loop: true
-        });
+                    $(photo).find('.animated-frame').velocity({
+                        rotateZ: 7,
+                        rotateX: 40,
+                        rotateY: 16
+                    }, {
+                        loop: true,
+                        duration: 5000
+                    });
+                }
+            }, {
+                delay: 0,
+                duration: 10000,
+                loop: true
+            });
+        }
 
         function amimateLineLong (el,dir, order) {
             if( dir == 'width') {
@@ -132,11 +136,8 @@ $(document).ready(function () {
     }
 
     function skillsInit() {
-        var skillBar = $('.portfolio-item.portfolio-item_skills');
+        var skillBar = $('.resume-item.resume-item_skills');
         var skillProcess = $(skillBar).find('.skill-process');
-
-        console.log(skillBar);
-        console.log(skillProcess);
 
         $(skillProcess).each(function (index, el) {
             var percentage = $(el).data('persentage');
@@ -145,7 +146,6 @@ $(document).ready(function () {
             $(el).css({
                 width: percentage + '%'
             });
-            console.log(percentage);
         });
     }
 

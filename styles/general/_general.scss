@@ -69,3 +69,37 @@ a {
   color: $c-main;
   transition: .3s;
 }
+
+dl {
+  text-align: left;
+
+  @media screen and (max-width: $screen-sm ) {
+    font-size: 13px;
+  }
+
+  dt {
+    float: left;
+    width: 30%;
+  }
+
+  dd {
+    margin-left: 0;
+    padding-left: 20px;
+    float: right;
+    width: 70%;
+  }
+
+  a {
+    color: inherit;
+
+    &:hover {
+      color: $c-main;
+    }
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}

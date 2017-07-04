@@ -1,4 +1,4 @@
-section.portfolio {
+section.resume {
   background: #eee;
 
   .container {
@@ -12,10 +12,11 @@ section.portfolio {
     flex-flow: row wrap;
     justify-content: flex-start;
 
-    .portfolio-item {
+    .resume-item {
       list-style: none;
       padding: 20px;
       width: 50%;
+
       @media (max-width: $screen-lg) {
         width: 100%;
       }
@@ -26,7 +27,7 @@ section.portfolio {
         margin-bottom: 0.6em;
       }
 
-      .portfolio-item-list {
+      .resume-item-list {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -42,7 +43,47 @@ section.portfolio {
         }
       }
 
-      &.portfolio-item_skills {
+      &.resume-item_about-me {
+        display: none;
+
+        @media screen and (max-width: $screen-lg ){
+          display: block;
+        }
+      }
+
+      &.resume-item_portfolio {
+        display: none;
+
+        @media screen and (max-width: $screen-lg ){
+           display: block;
+        }
+        .portfolio-list {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          flex-flow: row wrap;
+
+          li {
+            width: calc(100% / 3);
+            padding: 5px;
+
+            .work-title {
+              display: none;
+            }
+
+            a {
+              img {
+                display: block;
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+
+      &.resume-item_skills {
         .skill-list {
           padding: 0;
           margin: 30px 0 0;
@@ -97,7 +138,7 @@ section.portfolio {
         }
       }
 
-      &.portfolio-item_interests {
+      &.resume-item_interests {
         .interests-list {
           margin: 0;
           padding: 0;

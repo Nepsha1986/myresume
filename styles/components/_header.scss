@@ -8,6 +8,10 @@
   color: #fff;
   text-shadow: 1px 1px 1px #000;
 
+  @media screen and (max-width: $screen-lg) {
+    display: none;
+  }
+
   .portfolio-link {
     display: inline-block;
     color: inherit;
